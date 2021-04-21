@@ -2,7 +2,6 @@ import web
 import requests
 import json
 
-
 urls = ('/movies?', 'Movies',)    
 app = web.application(urls, globals())
 
@@ -31,7 +30,7 @@ class Movies:
         datos["Clasificacion"]=class_name
         datos["confidence"]=confidence
         datos["classifierTimestamp"]=classifierTimestamp
-        print(datos)
+        #print(datos)
 
         if response.ok:
             responseData = response.json()
